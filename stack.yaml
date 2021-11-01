@@ -16,7 +16,15 @@ resolver: lts-18.10
 
 packages:
 - attenuation
+- attenuation-lens
 - attenuation-profunctors
+
+extra-deps:
+- fin-int-0.2.0
+- portray-0.2.0
+- portray-diff-0.1.0.1
+- sint-0.2.0
+- wrapped-0.1.0.1
 
 ghc-options:
   "$locals": -Wall -Werror

@@ -1,0 +1,51 @@
+# Copyright 2021 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: attenuation-lens
+version: 0.1.0
+category: Optics
+synopsis: Optics that decay to attenuations
+description: |
+  Given an Attenuation and a validation function, it's natural to wonder
+  whether they can be combined into a prism-like value whose forward direction
+  validates input values, and whose reverse direction is just an attenuation.
+  The answer is yes, and they're implemented in this package.
+license: Apache-2.0
+author: Andrew Pritchard <awpr@google.com>
+copyright: 2021 Google LLC
+maintainer: Andrew Pritchard <awpr@google.com>
+github: google/hs-attenuation/attenuation-lens
+
+# Note: this causes CHANGELOG.md to be included in Hackage distributions.
+extra-source-files:
+  - CHANGELOG.md
+  - README.md
+
+dependencies:
+  - base >= 4.12 && < 4.16
+  - constraints >= 0.10 && < 0.14
+  - attenuation >= 0.2 && < 0.3
+  - profunctors
+
+  - fin-int
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Control.Lens.Attenuation
+  other-modules: []
+
+  when:
+    condition: false
+    other-modules: Paths_attenuation

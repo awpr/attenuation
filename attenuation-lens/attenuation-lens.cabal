@@ -1,0 +1,43 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           attenuation-lens
+version:        0.1.0
+synopsis:       Optics that decay to attenuations
+description:    Given an Attenuation and a validation function, it's natural to wonder
+                whether they can be combined into a prism-like value whose forward direction
+                validates input values, and whose reverse direction is just an attenuation.
+                The answer is yes, and they're implemented in this package.
+category:       Optics
+homepage:       https://github.com/google/hs-attenuation#readme
+bug-reports:    https://github.com/google/hs-attenuation/issues
+author:         Andrew Pritchard <awpr@google.com>
+maintainer:     Andrew Pritchard <awpr@google.com>
+copyright:      2021 Google LLC
+license:        Apache-2.0
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    CHANGELOG.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/google/hs-attenuation
+  subdir: attenuation-lens
+
+library
+  exposed-modules:
+      Control.Lens.Attenuation
+  hs-source-dirs:
+      src
+  build-depends:
+      attenuation ==0.2.*
+    , base >=4.12 && <4.16
+    , constraints >=0.10 && <0.14
+    , fin-int
+    , profunctors
+  default-language: Haskell2010
