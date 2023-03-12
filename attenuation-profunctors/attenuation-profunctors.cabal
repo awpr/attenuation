@@ -34,7 +34,7 @@ library
       src
   build-depends:
       attenuation ==0.2.*
-    , base >=4.12 && <4.18
+    , base >=4.12 && <4.19
     , constraints >=0.10 && <0.14
     , profunctors >=0.1 && <5.7
   default-language: Haskell2010
